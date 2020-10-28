@@ -5,7 +5,7 @@ namespace Infrastructure.Implementation.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public ProductRepository()
+        public ProductRepository(projectdbcontex)
         {
 
         }
