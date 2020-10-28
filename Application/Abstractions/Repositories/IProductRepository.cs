@@ -10,7 +10,7 @@ namespace Application.Abstractions.Repositories
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        bool DoesExisit(string name);
+        bool DoesExist(string name);
 
         /// <summary>
         /// Add a product and return an ID for it.

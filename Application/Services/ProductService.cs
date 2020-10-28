@@ -18,7 +18,7 @@ namespace Application.Services
 
         public long AddProduct(Product product)
         {
-            bool exisit = _productRepository.DoesExisit(product.Name);
+            bool exisit = _productRepository.DoesExist(product.Name);
             if (!exisit)
             {
                 return _productRepository.Add(product);

@@ -19,7 +19,7 @@ namespace Infrastructure.Implementation.Repositories
             return _uncleBobDbContext.SaveChanges();
         }
 
-        public bool DoesExisit(string name)
+        public bool DoesExist(string name)
         {
             //for fun, we are going to lie that it does not exist.
             return false;
