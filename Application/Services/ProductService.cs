@@ -18,8 +18,8 @@ namespace Application.Services
 
         public long AddProduct(Product product)
         {
-            bool notExisit = _productRepository.DoesExisit(product.Name);
-            if (notExisit)
+            bool exisit = _productRepository.DoesExisit(product.Name);
+            if (!exisit)
             {
                 return _productRepository.Add(product);
             }

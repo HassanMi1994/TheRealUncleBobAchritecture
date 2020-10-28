@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistance.EF
 {
-    public class ContactsDbContext : DbContext
+    public class UncleBobDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
 
-        public ContactsDbContext(DbContextOptions<ContactsDbContext> options)
+        public UncleBobDbContext(DbContextOptions<UncleBobDbContext> options)
             : base(options)
         {
 

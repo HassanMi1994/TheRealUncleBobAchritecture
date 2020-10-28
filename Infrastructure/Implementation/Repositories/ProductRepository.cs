@@ -1,18 +1,22 @@
 ﻿using Application.Abstractions.Repositories;
 using Domain.Model;
+using Infrastructure.Persistance.EF;
 
 namespace Infrastructure.Implementation.Repositories
 {
     public class ProductRepository : IProductRepository
     {
-        public ProductRepository(projectdbcontex)
-        {
+        private readonly UncleBobDbContext _uncleBobDbContext;
 
+        public ProductRepository(UncleBobDbContext uncleBobDbContext)
+        {
+            _uncleBobDbContext = uncleBobDbContext;
         }
 
         public long Add(Product product)
         {
-            return 0;
+            _uncleBobDbContext.Products.Add(product);
+            return _uncleBobDbContext.SaveChanges();
         }
 
         public bool DoesExisit(string name)

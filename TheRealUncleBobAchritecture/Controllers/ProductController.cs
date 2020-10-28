@@ -15,6 +15,7 @@ namespace TheRealUncleBobAchritecture.Controllers
             _productService = productService;
         }
 
+        [HttpPost("/Product/Insert")]
         public long Post(Product product)
         {
             return _productService.AddProduct(product);
